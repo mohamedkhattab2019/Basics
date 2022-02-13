@@ -106,7 +106,7 @@ echo $apple->name;
 ?> 
 ```
   2. Outside the class (by directly changing the property value):
-```
+```PHP
  <?php
 class Fruit {
   public $name;
@@ -151,8 +151,7 @@ var_dump($apple instanceof Fruit);  // must return true if appleis instance of e
 
 * If you create a __construct() function, PHP will automatically call this function when you create an object from a class.
 * **that using a constructor saves us from calling the set_name() method which reduces the amount of code:**
-```
-PHP
+```PHP
  <?php
 class Fruit {
   public $name;
@@ -184,8 +183,7 @@ echo $apple->get_color();
 
 * If you create a __destruct() function, PHP will automatically call this function at the end of the script.
 
-```
-PHP
+```PHP
  <?php
 class Fruit {
   public $name;
