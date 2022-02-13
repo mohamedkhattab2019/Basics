@@ -144,7 +144,63 @@ var_dump($apple instanceof Fruit);  // must return true if appleis instance of e
  
 ```
 
- 
+#### PHP OOP - Constructor
+* PHP - The __construct Function
 
+* A constructor allows you to initialize an object's properties upon creation of the object.
 
+* If you create a __construct() function, PHP will automatically call this function when you create an object from a class.
+* **that using a constructor saves us from calling the set_name() method which reduces the amount of code:**
+```
+PHP
+ <?php
+class Fruit {
+  public $name;
+  public $color;
+
+  function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  function get_name() {
+    return $this->name;
+  }
+  function get_color() {
+    return $this->color;
+  }
+}
+
+$apple = new Fruit("Apple", "red");
+echo $apple->get_name();
+echo "<br>";
+echo $apple->get_color();
+?> 
+```
+
+#### PHP OOP - Destructor
+* PHP - The __destruct Function
+
+* A destructor is called when the object is destructed or the script is stopped or exited.* 
+
+* If you create a __destruct() function, PHP will automatically call this function at the end of the script.
+
+```
+PHP
+ <?php
+class Fruit {
+  public $name;
+  public $color;
+
+  function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  function __destruct() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
+}
+
+$apple = new Fruit("Apple", "red");
+?> 
+```
 
