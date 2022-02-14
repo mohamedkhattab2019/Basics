@@ -258,7 +258,7 @@ $mango->set_weight('300'); // ERROR
 * **when class derives from another class**
 * The child class will inherit all the public and protected properties and mrthods from parent class. In addition it can have its own properties and methodes 
 *  An inherited class is defined by using the **extends** keyword.
-*  **Example :
+**Example :
   
 ```PHP
 <?php
@@ -320,6 +320,12 @@ class Strawberry extends Fruit {
 }
 $strawberry = new Strawberry("Strawberry", "red");  // OK. __construct() is public
 //$strawberry->message(); // **OK**. message() is public and it calls intro() (which is protected) from within the derived class
-//$strawberry->intro(); // **ERROR**. intro() is protected  can't be used oytsude clase or drived class from it 
+//$strawberry->intro(); //  ERROR . intro() is protected  can't be used oytsude clase or drived class from it 
 ?>
+```
+
+```diff
+- $strawberry->intro(); //  ERROR . intro() is protected  can't be used oytsude clase or drived class from it
++ $this -> intro();   // Call protected function from within derived class - OK 
+
 ```
