@@ -290,7 +290,7 @@ $strawberry->intro();
 This means that the Strawberry class can use the public $name and $color properties as well as the public __construct() and intro() methods from the Fruit  class because of inheritance. The Strawberry class also has its own method: message().
 
 
-## 8.PHP - Inheritance and the Protected Access Modifier
+### PHP - Inheritance and the Protected Access Modifier
 * **Protected** prop or methods can accessed only by the class it self and by classes drived from that class
 ```PHP
 <?php
@@ -327,5 +327,77 @@ $strawberry = new Strawberry("Strawberry", "red");  // OK. __construct() is publ
 ```diff
 - $strawberry->intro(); //  ERROR . intro() is protected  can't be used oytsude clase or drived class from it
 + $this -> intro();   // Call protected function from within derived class - OK 
+```
 
+### PHP - Overriding Inherited Methods
+
+* Inherited methods can be overridden by redefining the methods (use the same name) in the child class.
+* **The __construct() and intro() methods in the child class (Strawberry) will override the __construct() and intro() methods in the parent class (Fruit):**
+```PHP
+<?php
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color; 
+  }
+  public function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}."; 
+  }
+}
+
+class Strawberry extends Fruit {
+  public $weight;
+  public function __construct($name, $color, $weight) {
+    $this->name = $name;
+    $this->color = $color;
+    $this->weight = $weight; 
+  }
+  public function intro() {
+    echo "The fruit is {$this->name}, the color is {$this->color}, and the weight is {$this->weight} gram."; 
+  }
+}
+
+$strawberry = new Strawberry("Strawberry", "red", 50);
+$strawberry->intro();
+?>
+```
+
+
+### PHP - The final Keyword
+* The ***final*** keyword can be used to prevent class inheritance or to prevent method overriding.
+*   The following example shows how to prevent class inheritance:
+```PHP
+ <?php
+final class Fruit {
+  // some code
+}
+
+// will result in error
+class Strawberry extends Fruit {
+  // some code
+}
+?> 
+```
+this code Run result :
+```diff
+- PHP Fatal error: Class Strawberry may not inherit from final class (Fruit) in /home/o6MTL0/prog.php on line 10 
+```
+* The following example shows how to prevent method overriding:
+```PHP
+ <?php
+class Fruit {
+  final public function intro() {
+    // some code
+  }
+}
+
+class Strawberry extends Fruit {
+  // will result in error
+  public function intro() {
+    // some code
+  }
+}
+?> 
 ```
