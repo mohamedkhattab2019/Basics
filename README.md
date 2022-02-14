@@ -447,7 +447,7 @@ $goodbye->byebye();
   * the child class method must be defined with the same name.
   * the same or less restricted access modifier    abstract method (protected)  -> Child class (protected or public not private).
   * The number of required arguments must be the same. However, the child class may have optional arguments in addition.
-**Example**
+**Example1**
 ```PHP
 <?php
 // Parent class
@@ -492,16 +492,17 @@ echo $citroen->intro();
 ?>
 ```
 
-**More Examples
+**Example2**
+
 
 ```PHP 
 <?php
-abstract class ParentClass () {
+abstract class ParentClass {
   // Abstract method with an argument
   abstract protected function prefixName($name);
 }
 
-class ChildClass extends ParentClass () {
+class ChildClass extends ParentClass {
 // public prefixName func less restricted 
   public function prefixName ($name)
   {
@@ -523,8 +524,108 @@ class ChildClass extends ParentClass () {
 
 $object = new ChildClass();
 echo $object ->prefixName("John Doe");
-echo <br> ;
+echo "<br>" ;
 echo $object ->prefixName("Jane Doe");
 
 ?>
 ```
+**Example3**
+
+* ***Let's look at another example where the abstract method has an argument, and the child class has two optional arguments that are not defined in the parent's abstract method:***
+
+```PHP
+<?php
+abstract class ParentClass {
+  // Abstract method with an argument
+  abstract protected function prefixName($name);
+}
+
+class ChildClass extends ParentClass {
+  // The child class may define optional arguments that is not in the parent's abstract method
+  public function prefixName($name, $separator = ".", $greet = "Dear") {
+    if ($name == "John Doe") {
+      $prefix = "Mr";
+    } elseif ($name == "Jane Doe") {
+      $prefix = "Mrs";
+    } else {
+      $prefix = "";
+    }
+    return "{$greet} {$prefix}{$separator} {$name}";
+  }
+}
+
+$class = new ChildClass;
+echo $class->prefixName("John Doe");
+echo "<br>";  
+echo $class->prefixName("Jane Doe");
+echo "<br>";
+// arguments optional can be assigned or not
+echo $class->prefixName("John Doe","/","Sir");
+echo "<br>";  
+echo $class->prefixName("Jane Doe","*","Sonson");
+?>
+ 
+```
+## PHP - What are Interfaces?
+
+* Interfaces allow you to specify what methods a class should implement.
+* Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as "polymorphism".
+* ***Syntax***
+```PHP
+ <?php
+interface InterfaceName {
+  public function someMethod1();
+  public function someMethod2($name, $color);
+  public function someMethod3() : string;
+}
+?> 
+```
+***comparison***
+|Interfaces|Abstract classes|
+|--------- |----------------|
+|cannot have properties|can have properties|
+|All interface methods must be public|abstract class methods is public or protected|
+|All methods in an interface are abstract, so they cannot be implemented in code and the abstract keyword is not necessary||
+|Classes can implement an interface while inheriting from another class at the same time||
+
+**Example1**
+```PHP
+ <?php
+// Interface definition
+interface Animal {
+  public function makeSound();
+}
+
+// Class definitions
+class Cat implements Animal {
+  public function makeSound() {
+    echo " Meow ";
+  }
+}
+
+class Dog implements Animal {
+  public function makeSound() {
+    echo " Bark ";
+  }
+}
+
+class Mouse implements Animal {
+  public function makeSound() {
+    echo " Squeak ";
+  }
+}
+
+// Create a list of animals
+$cat = new Cat();
+$dog = new Dog();
+$mouse = new Mouse();
+$animals = array($cat, $dog, $mouse);
+
+// Tell the animals to make a sound
+foreach($animals as $animal) {
+  $animal->makeSound();
+}
+?> 
+```
+>>From the example above, let's say that we would like to write software which manages a group of animals. There are actions that all of the animals can do, but each animal does it in its own way.
+
