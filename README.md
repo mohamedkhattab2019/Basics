@@ -810,7 +810,7 @@ echo  $domainW3 -> websiteName;
 **For example, you may have a set of classes which describe an HTML table, such as Table, Row and Cell while also having another set of classes to describe furniture, such as Table, Chair and Bed. Namespaces can be used to organize the classes into two different groups while also preventing the two classes Table and Table from being mixed up.**
 * Example
 Create a Table class in the Html namespace:
-**```PHP
+```PHP
 <?php
  <?php
 namespace Html;
@@ -837,4 +837,159 @@ $table->message();
 </body>
 </html> 
 ?>
-```**
+```
+* ***For further organization, it is possible to have nested namespaces:***
+**Syntax**
+* Declare a namespace called Html inside a namespace called Code:
+>>  namespace Code\Html
+
+
+* Example
+
+Use classes from the Html namespace:
+let say that you have the namespace ***HTML** in seperate fiile called ***HTML.php***
+Any code that follows a namespace declaration is operating inside the namespace, so classes that belong to the namespace can be instantiated without any qualifiers. To access classes from outside a namespace, the class needs to have the namespace attached to it.
+
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">HTML.php</b></td>
+    <td><b style="font-size:30px">index.php</b></td>
+
+ </tr>
+ <tr>
+<td>
+
+  ```PHP
+  <?php
+  namespace Html;
+  class Table {
+    public $title = "";
+    public $numRows = 0;
+
+    public function message() {
+      echo "<p>Table '{$this->title}' has {$this->numRows} rows.</p>";
+    }
+  }
+
+  class Row {
+    public $numCells = 0;
+    public function message() {
+      echo "<p>The row has {$this->numCells} cells.</p>";
+    }
+  }
+  ?>
+  ```
+
+</td>
+<td>
+
+  ```PHP
+  <?php
+  include "Html.php";
+  $table = new Html\Table()
+  $table -> title = "kh table"
+  $table -> numRows = 5;
+  
+  $row = new  Html\Row()
+  $row -> numCells=3;
+  ?>
+  
+  //call our nethods in html 
+  <html>
+  <body>
+    <?php $table ->message(); ?>
+    <?php $row ->message(); ?>
+  </body> 
+  </html>  
+  ```
+
+</td>
+  
+  
+ </tr>
+</table>
+
+
+### Note 
+* **When many classes from the same namespace are being used at the same time, it is easier to use the namespace keyword:**
+
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">HTML.php</b></td>
+    <td><b style="font-size:30px">index.php</b></td>
+
+ </tr>
+ <tr>
+<td>
+
+  ```PHP
+  <?php
+  namespace Html;
+  class Table {
+    public $title = "";
+    public $numRows = 0;
+
+    public function message() {
+      echo "<p>Table '{$this->title}' has {$this->numRows} rows.</p>";
+    }
+  }
+
+  class Row {
+    public $numCells = 0;
+    public function message() {
+      echo "<p>The row has {$this->numCells} cells.</p>";
+    }
+  }
+  ?>
+  ```
+
+</td>
+<td>
+
+  ```PHP
+  <?php
+  namespace Html;  //// the difference is here 
+  include "Html.php";
+  $table = new Table()  // use directly the name space classes without Html\
+  $table -> title = "kh table"
+  $table -> numRows = 5;
+  
+  $row = new Row();
+  $row -> numCells=3;
+  ?>
+  
+  
+  * you can give name space alias name to be more easy to use 
+  
+  ```PHP
+<?php
+include "Html.php";
+use Html as H;
+$table = new H\Table();
+$table->title = "My table";
+$table->numRows = 5;
+?>
+
+<html>
+<body>
+
+<?php $table->message(); ?>
+
+</body>
+</html>
+```
+  
+  //call our nethods in html 
+  <html>
+  <body>
+    <?php $table ->message(); ?>
+    <?php $row ->message(); ?>
+  </body> 
+  </html>  
+  ```
+
+</td>
+  
+  
+ </tr>
+</table>
