@@ -894,7 +894,7 @@ Any code that follows a namespace declaration is operating inside the namespace,
   $row -> numCells=3;
   ?>
   
-  //call our nethods in html 
+  //call our methods in html 
   <html>
   <body>
     <?php $table ->message(); ?>
@@ -957,29 +957,7 @@ Any code that follows a namespace declaration is operating inside the namespace,
   $row = new Row();
   $row -> numCells=3;
   ?>
-  
-  
-  * you can give name space alias name to be more easy to use 
-  
-  ```PHP
-<?php
-include "Html.php";
-use Html as H;
-$table = new H\Table();
-$table->title = "My table";
-$table->numRows = 5;
-?>
-
-<html>
-<body>
-
-<?php $table->message(); ?>
-
-</body>
-</html>
-```
-  
-  //call our nethods in html 
+    //call our methods in html 
   <html>
   <body>
     <?php $table ->message(); ?>
@@ -993,3 +971,22 @@ $table->numRows = 5;
   
  </tr>
 </table>
+
+
+### Namespace Alias
+
+* It can be useful to give a namespace or class an alias to make it easier to write. This is done with the use keyword:
+* namespace alias:
+```PHP
+use Html as H;
+$table = new H\Table();
+```
+* class alias
+```PHP
+use Html\Table as T;
+$table = new T();
+```
+
+## PHP Iterables
+
+<a>https://www.w3schools.com/php/php_iterables.asp</a>
