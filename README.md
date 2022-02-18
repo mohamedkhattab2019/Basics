@@ -629,3 +629,85 @@ foreach($animals as $animal) {
 ```
 >>From the example above, let's say that we would like to write software which manages a group of animals. There are actions that all of the animals can do, but each animal does it in its own way.
 
+## PHP OOP - Traits
+
+***PHP only supports single inheritance: a child class can inherit only from one single parent.***
+* ***Traits*** make the class inherts from multiple behaviors.
+* Traits can have methods and abstract methods that can be used in multiple classes, its access modifier (public, private, or protected).
+* *Syntax-Declaration
+```PHP
+<?php
+trait TraitName {
+  // some code...
+}
+?>
+```
+* *Syntax-Usage
+```PHP
+ <?php
+class MyClass {
+  use TraitName;
+}
+?> 
+```
+* Example
+```PHP
+<?php
+trait message1{
+  public function msg1()
+  {
+    echo "OOP is Fun !!";
+  }
+}
+// class2 inherts from trait 
+class Welcome {
+  use message1;
+}
+
+$obj =new Welcome();
+$obj->msg1();
+?>
+```
+* Example Explained
+
+Here, we declare one trait: message1. Then, we create a class: Welcome. The class uses the trait, and all the methods in the trait will be available in the class.
+If other classes need to use the msg1() function, simply use the message1 trait in those classes. This reduces code duplication, because there is no need to redeclare the same method over and over again.
+## PHP - Using Multiple Traits
+* **This reduces code duplication, because there is no need to redeclare the same method over and over again.**
+```PHP
+<?php
+trait message1 {
+  public function msg1() {
+    echo "OOP is fun! ";
+  }
+}
+// another trait
+trait message2 {
+  public function msg2() {
+    echo "OOP reduces code duplication!";
+  }
+}
+
+//class use trait1
+class Welcome {
+  use message1;
+}
+//class2 use trait1 amd trait 2
+
+class Welcome2 {
+  use message1, message2;
+}
+
+$obj = new Welcome();
+$obj->msg1();
+echo "<br>";
+// obj of class2 use 2 function one from trait one and the other from trairt 2
+$obj2 = new Welcome2();
+$obj2->msg1();
+$obj2->msg2();
+
+?>
+```
+
+
+
