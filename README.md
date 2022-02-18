@@ -732,6 +732,7 @@ class ClassName {
 ```PHP
  <?php
 class greeting {
+  public static $value=3.14159; // static properties
   public static function welcome() {
     echo "Hello World!";
   }
@@ -739,17 +740,24 @@ class greeting {
 
 // Call static method
 greeting::welcome();
+// call static prop 
+echo "<br>static prop calling .. <br>";
+echo greeting::$value;
 ?> 
 ```
 * **A static method can be accessed from a method in the same class using the *self* keyword and double colon (::):**
 ```PHP
 <?php
 class greeting {
+  public static $value=3.14159; // static properties
   public static function welcome(){
     echo "Hello World";
+    ث
   }
   public function __construct(){
-    self::welcome();   
+    self::welcome(); 
+    // call static of self class Prop
+    echo self::$value;
   }
 }
 new greeting();
@@ -758,7 +766,7 @@ new greeting();
 
 * **Static methods can also be called from methods in other classes. To do this, the static method should be public:**
 * Example
-``PHP
+```PHP
 <?php
 class greeting {
   public static function welcome() {
@@ -792,3 +800,6 @@ class domainW3 extends domain {
 $domainW3 =new domainW3;
 echo  $domainW3 -> websiteName; 
 ?>
+```
+
+
