@@ -1,3 +1,4 @@
+#!/user/bin/env python3
 class Element(object):
     def __init__(self, value):
         self.value = value
@@ -67,9 +68,9 @@ class LinkedList(object):
 
         """Delete the first node with a given value."""
         if self.get_position(value)==self.head:
-        	self.head = self.get_position(value).next
+            self.head = self.get_position(value).next
         else:
-        	self.get_position(value-1).next = self.get_position(value).next
+            self.get_position(value-1).next = self.get_position(value).next
         	
         pass
 # Test cases

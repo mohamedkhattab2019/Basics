@@ -50,19 +50,16 @@ class LinkedList(object):
         the 2nd and 3rd elements."""
         new_element.next = self.get_position(position)
         self.get_position(position-1).next=new_element
-        pass
-
+        
     def delete(self, value):
         """Delete the first node with a given value."""
-        print(value)
         if self.get_position(value)==self.head:
-        	self.head = self.get_position(value).next
-        	print self.head.value	
+            self.head = self.get_position(value).next
         else:
-        	self.get_position(value-1).next = self.get_position(value).next
-        	
+            self.get_position(value-1).next = self.get_position(value).next
         pass
-          # Utility function to print the
+        	
+    # Utility function to print the
     # linked LinkedList
     def printList(self):
         temp = self.head
