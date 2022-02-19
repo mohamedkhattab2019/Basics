@@ -5,6 +5,9 @@
 * **space** mean how much storage space do you need ?
 * ***Efficiency*** mean to get the most done with minimum resources 
 * **Notation**
+
+<span style="width:100px;height:100px;">![picture alt](https://www.devopsschool.com/blog/wp-content/uploads/2021/06/Complete-Tutorial-on-big-O-big-oh-notation-740x414.png)</span>
+
 * example : lets say we need to add 200 to input which method below will be faster:
  <table>
   <tr>
