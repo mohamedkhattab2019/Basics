@@ -46,4 +46,15 @@ if we say we need `O(26n+3)` to itterate through the alphabet words this is the 
    * Pop: Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an          Underflow condition.
    * Peek or Top: Returns the top element of the stack.
    * isEmpty: Returns true if the stack is empty, else false.
- <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210716162942/stack-660x345.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="600" height="400" />.
+ <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210716162942/stack-660x345.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="400" height="250" />.
+ 
+ * **Time Complexity:**
+   * Access: O(n)
+   * Search: O(n)
+   * Insert(Push): O(1)
+   * Remove(Pop): O(1)
+   * isEmpty() and peek() : O(1)
+* Applications :
+  * Redo-undo features at many places like editors, photoshop.
+  * Forward and backward feature in web browsers
+  * Used in many algorithms like Tower of Hanoi, tree traversals, stock span problem, histogram problem.
