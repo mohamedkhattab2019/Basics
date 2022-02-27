@@ -58,3 +58,12 @@ if we say we need `O(26n+3)` to itterate through the alphabet words this is the 
   * Redo-undo features at many places like editors, photoshop.
   * Forward and backward feature in web browsers
   * Used in many algorithms like Tower of Hanoi, tree traversals, stock span problem, histogram problem.
+
+* Queue
+* A Queue is a collection of elements, supporting two principle operations: enqueue, which inserts an element into the queue, and dequeue, which removes an      element from the queue
+* First in, first out data structure **(FIFO)**: the oldest added object is the first to be removed
+*  **Time Complexity**:
+Access: O(n)
+Search: O(n)
+Insert: O(1)
+Remove: O(1)
