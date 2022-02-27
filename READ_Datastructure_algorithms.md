@@ -24,7 +24,7 @@
 * Aprroximation : 
 if we say we need `O(26n+3)` to itterate through the alphabet words this is the worst cas so we consider an approximation to be `O(n)`.
 
-* linked List
+# linked List
 * A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using    pointers(address) as shown in the below image:
  <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="700" height="150" />.
 * **A linked list consists of nodes where each node contains a data field (value) and a reference(link) to the next node in the list.**
@@ -38,3 +38,32 @@ if we say we need `O(26n+3)` to itterate through the alphabet words this is the 
   * Insert: O(1) -> since you does shifting around pointers not iterating over every element in the list. 
   * Remove: O(1) 
   
+# Stack FILO
+* Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
+* Stack is realy usefull when you care about the most recent elements.
+* Stack Operations :
+   * Push: Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
+   * Pop: Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an          Underflow condition.
+   * Peek or Top: Returns the top element of the stack.
+   * isEmpty: Returns true if the stack is empty, else false.
+ <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210716162942/stack-660x345.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="400" height="250" />.
+ 
+ * **Time Complexity:**
+   * Access: O(n)
+   * Search: O(n)
+   * Insert(Push): O(1)
+   * Remove(Pop): O(1)
+   * isEmpty() and peek() : O(1)
+* Applications :
+  * Redo-undo features at many places like editors, photoshop.
+  * Forward and backward feature in web browsers
+  * Used in many algorithms like Tower of Hanoi, tree traversals, stock span problem, histogram problem.
+
+* Queue
+* A Queue is a collection of elements, supporting two principle operations: enqueue, which inserts an element into the queue, and dequeue, which removes an      element from the queue
+* First in, first out data structure **(FIFO)**: the oldest added object is the first to be removed
+*  **Time Complexity**:
+Access: O(n)
+Search: O(n)
+Insert: O(1)
+Remove: O(1)
