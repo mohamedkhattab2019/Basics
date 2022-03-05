@@ -89,9 +89,14 @@ Remove: O(1)
 </table>
 
 ## Sorting 
-### Buble sort:
-* **O(n^)
- <img src="https://www.programmingsimplified.com/images/c/bubble-sort.gif" width="300" height="100">
+### Buble Sort:
+* Time Complixty : ![\Large O(n^2)](https://latex.codecogs.com/svg.latex?\Large&space;O(n^2)) 
 
+<img src="https://www.programmingsimplified.com/images/c/bubble-sort.gif" width="300" height="100">
 
+### Merge Sort
+
+* Time Complixty : ![\Large O(nlog(n))](https://latex.codecogs.com/svg.latex?\Large&space;O(nlog(n))) 
+* Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves
+ <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Merge-Sort-Tutorial.png" width="500" height="500">
 
