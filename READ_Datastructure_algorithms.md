@@ -67,3 +67,31 @@ Access: O(n)
 Search: O(n)
 Insert: O(1)
 Remove: O(1)
+
+# Searching and sorting 
+## Binary search
+*  Binary Search is a searching algorithm used in a **sorted array** by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Log n).
+*  Binary vs Linear(sequential) Search:
+  * Time complexity of linear search -O(n) , Binary search has time complexity O(log n).
+  * Linear search performs equality comparisons and Binary search performs ordering comparisons
+<table>
+  <tr style="background-color: #a99ee7;">
+    <td>
+      <img src="https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif" width="400" height="300">     
+    </td>
+    <td>
+     <img src="https://blog.penjee.com/wp-content/uploads/2015/12/linear-vs-binary-search-worst-case.gif" width="400" height="300">
+    </td> 
+   <td>
+     <img src="https://blog.penjee.com/wp-content/uploads/2015/12/linear-vs-binary-search-best-case.gif" width="400" height="300">
+    </td> 
+  </tr>
+</table>
+
+## Sorting 
+### Buble sort:
+* **O(n^)
+ <img src="https://www.programmingsimplified.com/images/c/bubble-sort.gif" width="300" height="100">
+
+
+
