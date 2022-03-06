@@ -97,6 +97,17 @@ Remove: O(1)
 ### Merge Sort
 
 * Time Complixty : ![\Large O(nlog(n))](https://latex.codecogs.com/svg.latex?\Large&space;O(nlog(n))) 
-* Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves
+* Merge Sort is **a Divide and Conquer algorithm**. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves
  <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Merge-Sort-Tutorial.png" width="500" height="500">
+ 
+ ### Quick Sort 
+* QuickSort is **a Divide and Conquer algorithm**. It picks an element as pivot and partitions the given array around the picked pivot. 
+* pick pivot in different ways:
+  * Always pick first element as pivot.
+  * Always pick last element as pivot.
+  * Pick a random element as pivot.
+  * Pick median as pivot.
+* Time Complixty : 
+  * Average and best case  ![\Large O(nlog(n))](https://latex.codecogs.com/svg.latex?\Large&space;O(nlog(n)))
+  * worest case : ![\Large O(n^2)](https://latex.codecogs.com/svg.latex?\Large&space;O(n^2)) 
 
