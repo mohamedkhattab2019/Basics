@@ -111,3 +111,5 @@ Remove: O(1)
   * Average and best case  ![\Large O(nlog(n))](https://latex.codecogs.com/svg.latex?\Large&space;O(nlog(n)))
   * worest case : ![\Large O(n^2)](https://latex.codecogs.com/svg.latex?\Large&space;O(n^2)) 
 
+ <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" width="400" height="300">     
+
