@@ -20,9 +20,16 @@ The SOLID Principles are five principles of Object-Oriented class design. They a
   3. Merge conflicts.They appear when different teams change the same file.
      But if the SRP is followed, fewer conflicts will appear – files will have a single reason to change, and conflicts that do exist will be 
   
-  ## Open-Closed Principle (OCP)
+## Open-Closed Principle (OCP)
  * **software entities (classes,modules,functions,etc.) should be open for extension, but closed for modification.**
  * Any new functionality should be done by adding new class instead of changeing existing one.
  * How to apply :
     1. using abstract class **Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks.**
     2. using interface      **When one or more classes use the same interface, it is referred to as "polymorphism"**.
+
+## Liskov Substitution Principle (LSP)
+* The Liskov Substitution Principle states that subclasses should be substitutable for their base classes
+* if you have class ***B*** inherits from class ***A***   then class ***A*** should be 
+  replaceable by class ***B*** with out anychanges"
+  A obiectA = new B();
+   
