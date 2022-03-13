@@ -1,0 +1,15 @@
+/home/khattab/Basics/SW-SolidPrinciples/ISP/bin/Debug/net6.0/ISP
+/home/khattab/Basics/SW-SolidPrinciples/ISP/bin/Debug/net6.0/ISP.deps.json
+/home/khattab/Basics/SW-SolidPrinciples/ISP/bin/Debug/net6.0/ISP.runtimeconfig.json
+/home/khattab/Basics/SW-SolidPrinciples/ISP/bin/Debug/net6.0/ISP.dll
+/home/khattab/Basics/SW-SolidPrinciples/ISP/bin/Debug/net6.0/ISP.pdb
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.csproj.AssemblyReference.cache
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.GeneratedMSBuildEditorConfig.editorconfig
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.AssemblyInfoInputs.cache
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.AssemblyInfo.cs
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.csproj.CoreCompileInputs.cache
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.dll
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/refint/ISP.dll
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.pdb
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ISP.genruntimeconfig.cache
+/home/khattab/Basics/SW-SolidPrinciples/ISP/obj/Debug/net6.0/ref/ISP.dll

@@ -1,0 +1,15 @@
+/home/khattab/Basics/SW-SolidPrinciples/LSP/bin/Debug/net6.0/LSP
+/home/khattab/Basics/SW-SolidPrinciples/LSP/bin/Debug/net6.0/LSP.deps.json
+/home/khattab/Basics/SW-SolidPrinciples/LSP/bin/Debug/net6.0/LSP.runtimeconfig.json
+/home/khattab/Basics/SW-SolidPrinciples/LSP/bin/Debug/net6.0/LSP.dll
+/home/khattab/Basics/SW-SolidPrinciples/LSP/bin/Debug/net6.0/LSP.pdb
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.csproj.AssemblyReference.cache
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.GeneratedMSBuildEditorConfig.editorconfig
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.AssemblyInfoInputs.cache
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.AssemblyInfo.cs
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.csproj.CoreCompileInputs.cache
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.dll
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/refint/LSP.dll
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.pdb
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/LSP.genruntimeconfig.cache
+/home/khattab/Basics/SW-SolidPrinciples/LSP/obj/Debug/net6.0/ref/LSP.dll
