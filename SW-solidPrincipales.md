@@ -32,4 +32,27 @@ The SOLID Principles are five principles of Object-Oriented class design. They a
 * if you have class ***B*** inherits from class ***A***   then class ***A*** should be 
   replaceable by class ***B*** with out anychanges"
   A obiectA = new B();
+* one of the way to apply LSP is Virtual methode ij=n the parent class and override it on childrens.
+
+## Interface Segregation Principles (ISP)
+* Interface here mean is what client see and use.
+* "Clients shouldn't be forced to debend on methodes they do not use." **it's some loke like SRP
+* Avoid Fat interface 
+* client mustn't implement unneces sary methods.
+* Example : 
+* let say we have interface has thre methods for order payment one for cash payment ,online payment ,and credit payment 
+* when you proceed to create class implement one of the iterface methodes you must implement the three methods 
+* so in the three classes you will repeate the thre implementation of interface methods .
+* and if you add new methode to the interface e.g for installment payment 
+* the old classes will have error as you have to implement the forth added method 
+* so you will repeate the test process to the old classes and deploy it again
+* **solution**:
+* segregate the interface into more than one interface its methos is strongly related
+* create three classes implement its related inerface 
+* each class will only implement one methode in its extended interface 
+* when you add new class you will not edit and testeing and deploy the old class
+* also when you edit in the specifice interface (add nnew method) you will need only to implement on one class (clients)which extended it . 
+* **if you need to implement case that you can use all payment method once**
+*  
+
    
