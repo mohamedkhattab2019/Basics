@@ -55,4 +55,5 @@ The SOLID Principles are five principles of Object-Oriented class design. They a
 * **if you need to implement case that you can use all payment method once**
 *  
 
-   
+## Dependency Inversion Principle (DIP)
+* Hiegh Levels modules should not deppend on low level modules.Both should depend upon abstractions.
