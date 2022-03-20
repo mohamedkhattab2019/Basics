@@ -26,7 +26,6 @@ The SOLID Principles are five principles of Object-Oriented class design. They a
  * How to apply :
     1. using abstract class **Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks.**
     2. using interface      **When one or more classes use the same interface, it is referred to as "polymorphism"**.
-
 ## Liskov Substitution Principle (LSP)
 * The Liskov Substitution Principle states that subclasses should be substitutable for their base classes
 * if you have class ***B*** inherits from class ***A***   then class ***A*** should be 
@@ -55,4 +54,22 @@ The SOLID Principles are five principles of Object-Oriented class design. They a
 * **if you need to implement case that you can use all payment method once**
 *  
 
+## Dependency Inversion Principle (DIP)
+* Hiegh Levels modules should not deppend on low level modules.Both should depend upon abstractions.
+* bad DIP show heigh coupling of heigh level 
+* ***Solid principles and design patterns are both work to avoid coupling with code modules increase (cohision)***
+*  invertion mean inverted dependency insteed of the hiegh level module  was depend on concrete class and verify 2 objects for two types of mail and two methods implement two object and that also **vaiolate OCP** as this hiegh class is open to modify if we add new mail type
+* **solution** is to add abstraction class and the hiegh level depends on it and implement this class Imessage and the low levlel depends on the abstraction class to implement it methods.  
+* after aply DIP low level becomes losely coupled with hiegh level moduels that means that the hiegh level will not affected by the modification on low level modules .
+
+* Methodes of Dependency Injection Implementation :
+  * Constructor injection : 
+     * Create constructor on the Hiegh Levle module that get Imessage service as argument
+     * in the calling of the hiegh level module on the main programe pass the low level class(Which impelement the middele layer) you want to implement
+  * Methode injection : 
+     * Make The Methode on the Hiegh Levle module get Imessage service as argument
+     * in the calling of the hiegh level module on the main programe pass the low level class(Which impelement the middele layer)  you want to implement        To HL Methode
+  * Prop. injection : 
+     * create Property type IMessage (abstraction layer Interface) The Methode on the Hiegh Levle module implement (abstraction layer Interface) Method   
+     * in the calling of the hiegh level module on the main programe inject yhe peoperty by the low level class(Which impelement the middele layer)  you        want to implement        To HL Methode
    
