@@ -1,0 +1,15 @@
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.csproj.AssemblyReference.cache
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.GeneratedMSBuildEditorConfig.editorconfig
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.AssemblyInfoInputs.cache
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.AssemblyInfo.cs
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.csproj.CoreCompileInputs.cache
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/bin/Debug/net6.0/Prototype
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/bin/Debug/net6.0/Prototype.deps.json
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/bin/Debug/net6.0/Prototype.runtimeconfig.json
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/bin/Debug/net6.0/Prototype.dll
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/bin/Debug/net6.0/Prototype.pdb
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.dll
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/refint/Prototype.dll
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.pdb
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/Prototype.genruntimeconfig.cache
+/home/khattab/Basics/DesignPatterns/CreationalDP/Prototype/obj/Debug/net6.0/ref/Prototype.dll
