@@ -202,7 +202,7 @@ $apple = new Fruit("Apple", "red");
 ?> 
 ```
 ## 7.PHP OOP - Access Modifiers
-* PHP - Access Modifiers
+### PHP - Access Modifiers
 
 * Properties and methods can have access modifiers which control where they can be accessed.
 
@@ -253,6 +253,89 @@ $mango->set_color('Yellow'); // ERROR
 $mango->set_weight('300'); // ERROR
 ?> 
 ```
+
+### Python - Access Modifiers
+* **Public Access Modifier:**
+  Public any where
+```python
+# program to illustrate public access modifier in a class
+# program to illustrate public access modifier in a class
+
+class NameAge:
+  # constructor
+  def __init__(self,name,age):
+    # properties 
+    self.khName = name
+    self.khAge	= age
+    # public method
+  def displayAge(self):
+      # access public property
+  	print("Age : ",self.khAge)
+      
+# create object
+obj = NameAge('khattab',26)
+# access class public pros and methodes
+print("Name : ",obj.khName)
+obj.displayAge()
+```
+* **Protected Access Modifier:**
+  * The members of a class that are declared protected are only accessible to a class derived from it. 
+  * ‘_’ symbol before the data member of that class.
+```
+#!/user/bin/env python3
+
+# program to illustrate protected access modifier in a class
+
+
+# super class
+
+class Students:
+
+    # Protected data memper(prop)
+
+    _name   = None
+    _roll   = None
+    _branch = None
+
+# Constructor
+    def __init__(self,name,roll,branch):
+        self._name      = name
+        self._roll      = roll
+        self._branch   =branch
+
+
+
+    # protected member function 
+
+    def _displayRollAndBranch(self):
+        # accessing protected data members
+        print("ROLL : ",self._roll)
+        print("branch : ",self._branch)
+
+
+# derived class accec props and methodes
+class  Khattab(Students):
+
+    ## Constactor
+    def __init__ (self,name,roll,branch):
+        Students.__init__(self,name,roll,branch)
+
+
+    # public methode on it i will access prop _Name and methode _displayRollAndBranch
+    def displyData(self):
+        # accessing protected data members of super class
+        print("Name : ",self._name)
+        # accessing protected member functions of super class
+        self._displayRollAndBranch()
+
+
+# creating objects of the derived class   
+obj = Khattab("khattab",12222,"SDE")
+
+# call displyData methode
+obj.displyData()
+```
+
 
 ## 8.PHP - What is Inheritance?
 * **when class derives from another class**
