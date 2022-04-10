@@ -269,7 +269,7 @@ class NameAge:
     self.khAge	= age
     # public method
   def displayAge(self):
-      # access public property
+    # access public property
   	print("Age : ",self.khAge)
       
 # create object
@@ -281,7 +281,7 @@ obj.displayAge()
 * **Protected Access Modifier:**
   * The members of a class that are declared protected are only accessible to a class derived from it. 
   * ‘_’ symbol before the data member of that class.
-```
+```python
 #!/user/bin/env python3
 
 # program to illustrate protected access modifier in a class
@@ -335,7 +335,120 @@ obj = Khattab("khattab",12222,"SDE")
 # call displyData methode
 obj.displyData()
 ```
+* **Private Access Modifier:**
+The members of a class that are declared private are accessible within the class only, private access modifier is the most secure access modifier. Data members of a class are declared private by adding a double underscore ‘__’ symbol before the data member of that class. 
 
+## Method overriding in action
+### Method overriding is an ability of any object-oriented programming language that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
+
+### Multiple Inheritance: When a class is derived from more than one base class it is called multiple Inheritance.
+Example: Let’s consider an example where we want to override a method of one parent class only. Below is the implementation.
+
+```python
+#!/user/bin/env python3
+
+# Method Overriding
+class Parent:
+    def __init__(self):
+        self.value=5
+
+    def get_value(self):
+        return self.value
+
+
+class Child(Parent):
+    def get_value(self):
+        return self.value+2
+
+c = Child()
+print(c.get_value())
+print(Parent.__dict__)
+print(Child.__dict__)
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#Example: Let’s consider an example where we want to 
+# override a method of one parent class only. Below is the implementation.
+
+class Parent1:
+    def show(self):
+        print("inside Parent 1")
+
+class Parent2:
+    def display(self):
+        print("inside Parent 2")
+
+class Child(Parent1,Parent2):
+     # Child's show method overide Parent one
+    def show(self):
+        print("IN Child")        
+
+obj = Child()
+obj.show()
+obj.display()
+```
+### 2.Multilevel Inheritance
+```python
+# Python program to demonstrate
+# overriding in multilevel inheritance
+
+
+# Python program to demonstrate
+# overriding in multilevel inheritance
+
+
+class Parent():
+		
+	# Parent's show method
+	def display(self):
+		print("Inside Parent")
+	
+	
+# Inherited or Sub class (Note Parent in bracket)
+class Child(Parent):
+		
+	# Child's show method
+	def show(self):
+		print("Inside Child")
+	
+# Inherited or Sub class (Note Child in bracket)
+class GrandChild(Child):
+		
+	# Child's show method
+	def show(self):
+		print("Inside GrandChild")		
+	
+# Driver code
+g = GrandChild()
+g.show()
+g.display()
+```
+### 3.Calling the Parent’s method within the overridden method
+#### Using Super(): Python super() function provides us the facility to refer to the parent class explicitly
+```python
+# Python program to demonstrate
+# calling the parent's class method
+# inside the overridden method using
+# super()
+
+
+class Parent():
+	
+	def show(self):
+		print("Inside Parent")
+		
+class Child(Parent):
+	
+	def show(self):
+		
+		# Calling the parent's class
+		# method
+		super().show()
+		print("Inside Child")
+		
+# Driver's code
+obj = Child()
+obj.show()
+
+```
 
 ## 8.PHP - What is Inheritance?
 * **when class derives from another class**
