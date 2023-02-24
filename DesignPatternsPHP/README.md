@@ -19,3 +19,18 @@ For example, to add a new product type to the app, you’ll only need to create 
 
 * Use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
 *  Use the Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time.
+
+#### Abstract factory
+* Let you produce family of related objects with out specifying their concrete class.
+![image desc](./ProductFamiliesAndTheirVariants.png)
+
+##### problem
+1- you buy an victorian chair and then you want to get sofa you received modern sofa.
+2- Furniture vendors update their catalogs very often, and you wouldn’t want to change the core code each time it happens.
+
+##### Solution
+The first thing the Abstract Factory pattern suggests is to explicitly declare interfaces for each distinct product of the product family (e.g., chair, sofa or coffee table). Then you can make all variants of products follow those interfaces.
+![image desc](./interfaceForEachDistinctProductFamily.png)
+##### Structure
+![image desc](./abstructClassStructure.png)
+
