@@ -57,3 +57,19 @@ You can go further and extract a series of calls to the builder steps you use to
 
 ![image desc](./imgs/BuilderStructure.png)
 
+
+#### Adapter
+**Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate.**
+##### Problem
+Imagine that you’re creating a stock market monitoring app. The app downloads the stock data from multiple sources in XML format and then displays nice-looking charts and diagrams for the user.
+
+At some point, you decide to improve the app by integrating a smart 3rd-party analytics library. But there’s a catch: the analytics library only works with data in JSON format.
+
+##### Solution
+Adapters can not only convert data into various formats but can also help objects with different interfaces collaborate. Here’s how it works:
+
+The adapter gets an interface, compatible with one of the existing objects.
+Using this interface, the existing object can safely call the adapter’s methods.
+Upon receiving a call, the adapter passes the request to the second object, but in a format and order that the second object expects.
+
+![image desc](./imgs/object-adapter-UML.png)
